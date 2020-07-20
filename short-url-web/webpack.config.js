@@ -3,6 +3,10 @@ const path = require('path');
 
 module.exports = {
     entry: './src/index.tsx',
+    devServer: {
+        contentBase: './dist',
+        hot: true,
+    },
     module: {
         rules: [
             {
@@ -30,7 +34,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|svg|jpg|gif|ico)$/,
+                test: /\.(png|svg|jpg|gif)$/,
                 use: [
                     'file-loader',
                 ],
