@@ -5,7 +5,7 @@ export class Url {
 
   constructor(shortUrl: string, longUrl: string) {
 	  this.shortUrl = shortUrl;
-	  this.longUrl = longUrl
+	  this.longUrl = longUrl;
   }
 
 	@PrimaryColumn('varchar', { nullable: false })

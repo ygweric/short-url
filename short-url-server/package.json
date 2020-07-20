@@ -24,6 +24,7 @@
       "@nestjs/common": "^7.0.0",
       "@nestjs/core": "^7.0.0",
       "@nestjs/platform-express": "^7.0.0",
+      "mysql": "^2.14.1",
       "nodemon": "^2.0.4",
       "reflect-metadata": "^0.1.10",
       "rimraf": "^3.0.2",
@@ -31,8 +32,7 @@
       "sqlite3": "^4.0.3",
       "tslint": "^6.1.2",
       "tslint-config-prettier": "^1.18.0",
-      "typeorm": "0.2.25",
-      "mysql": "^2.14.1"
+      "typeorm": "0.2.25"
    },
    "devDependencies": {
       "@nestjs/cli": "^7.0.0",
