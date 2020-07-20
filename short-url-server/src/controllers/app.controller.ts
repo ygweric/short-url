@@ -14,7 +14,8 @@ export class AppController {
 
     if (!validURL(longUrl)) {
       return res.status(HttpStatus.OK).json({
-        code: errorCode.URL_NOT_VALID
+        code: errorCode.URL_NOT_VALID,
+        message: `invalid url: ${longUrl}`
       });
     }
 
