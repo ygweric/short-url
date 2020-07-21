@@ -49,7 +49,7 @@ All files           |   96.25 |    78.57 |     100 |   95.52 |
 ```
 export class Url {
 	@PrimaryColumn('varchar', { nullable: false })
-  public shortUrl: string;
+	public shortUrl: string;
 
 	@Column("text", { nullable: false})
 	public longUrl: string;
