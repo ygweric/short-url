@@ -8,8 +8,8 @@ export class Url {
 	  this.longUrl = longUrl;
   }
 
-	@PrimaryColumn('varchar', { nullable: false })
-    public shortUrl: string;
+    @PrimaryColumn('varchar', { nullable: false })
+ 	public shortUrl: string;
 
 	@Column("text", { nullable: false})
 	public longUrl: string;
