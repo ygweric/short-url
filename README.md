@@ -13,6 +13,7 @@ NestJs + TypeScript + TypeORM + Sqlite
 npm i
 npm start
 ```
+will run server in open http://localhost:3000/
 
 ## Test
 ```
@@ -21,6 +22,7 @@ npm run test:cov
 ```
 
 # 测试覆盖率
+```
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------|---------|----------|---------|---------|-------------------
@@ -36,6 +38,7 @@ All files           |   96.25 |    78.57 |     100 |   95.52 |
  services           |    93.1 |    66.67 |     100 |   91.67 |                   
   app.service.ts    |    93.1 |    66.67 |     100 |   91.67 | 14,32             
 --------------------|---------|----------|---------|---------|-------------------
+```
 
 # 短连接生成机制
 采用数据库sum自增的方式， 将sum总数转变为62进制的字符串
@@ -95,4 +98,9 @@ React + TypeScript + Axios + AntD
 # TODO
 * 本来想配置less的，报错了， 先发一版再说，回头改
 
-
+## Run it
+```
+npm i
+npm start
+```
+open http://localhost:8080/
