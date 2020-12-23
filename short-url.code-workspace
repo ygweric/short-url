@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "short-url-server"
+		},
+		{
+			"path": "short-url-web"
+		}
+	],
+    "settings": {}
+}

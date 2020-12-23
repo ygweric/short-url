@@ -1,1 +1,0 @@
-powered by React

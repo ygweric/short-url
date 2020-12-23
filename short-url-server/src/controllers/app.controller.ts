@@ -6,32 +6,29 @@ import { validURL } from '../common/stringUtil';
 
 @Controller('url')
 export class AppController {
-
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   @Post()
-  async insertUrl(@Body('longUrl') longUrl: string, @Res() res: Response|any): Promise<Response|any> {
-
+  async insertUrl(@Body('longUrl') longUrl: string, @Res() res: Response | any): Promise<Response | any> {
     if (!validURL(longUrl)) {
       return res.status(HttpStatus.OK).json({
         code: errorCode.URL_NOT_VALID,
-        message: `invalid url: ${longUrl}`
+        message: `invalid url: ${longUrl}`,
       });
     }
 
     const url = await this.appService.insertUrl(longUrl);
     return res.status(HttpStatus.OK).json({
       data: url,
-      code: errorCode.SUCDESS
+      code: errorCode.SUCDESS,
     });
   }
-
 
   @Get()
   async findUrl(@Query('shortUrl') shortUrl: string, @Res() res: Response | any): Promise<Response | any> {
     if (!validURL(shortUrl)) {
       return res.status(HttpStatus.OK).json({
-        code: errorCode.URL_NOT_VALID
+        code: errorCode.URL_NOT_VALID,
       });
     }
 
@@ -39,14 +36,13 @@ export class AppController {
     if (!longUrl) {
       return res.status(HttpStatus.OK).json({
         code: errorCode.URL_NOT_EXIST,
-        message: `failed to find url: ${shortUrl}`
+        message: `failed to find url: ${shortUrl}`,
       });
     }
 
     return res.status(HttpStatus.OK).json({
       data: longUrl,
-      code: errorCode.SUCDESS
+      code: errorCode.SUCDESS,
     });
   }
-
 }

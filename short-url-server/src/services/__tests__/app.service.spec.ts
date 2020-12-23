@@ -1,4 +1,4 @@
-import { createConnection } from "typeorm";
+import { createConnection } from 'typeorm';
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppService } from '../app.service';
 
@@ -15,16 +15,13 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-
     it('insert and get url', async () => {
       const longUrl = `www.baidu.com/looooooooooooooogurl${Date.now()}`;
       const shortUrl = await appService.insertUrl(longUrl);
       expect(shortUrl).not.toBeNull();
 
-      const theLongUrl= await appService.findUrl(shortUrl);
+      const theLongUrl = await appService.findUrl(shortUrl);
       expect(theLongUrl).toBe(longUrl);
     });
-
-
   });
 });
